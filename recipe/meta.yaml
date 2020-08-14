@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vroom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vroom/vroom_{{ version }}.tar.gz
-  sha256: a6eb5c1408cd1bea8650a3ad7fb571785026692e277b6eb3c0e4540c865050dd
+  sha256: f773fec0e1b9c08f635c21db6608261a519af8eac0ff6e5a779b3b380ab9cda2
 
 build:
   merge_build_host: true  # [win]
@@ -32,8 +32,8 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rcpp >=0.12.18.3
     - r-bit64
+    - r-cpp11 >=0.2.0
     - r-crayon
     - r-glue
     - r-hms
@@ -42,12 +42,13 @@ requirements:
     - r-rlang >=0.4.2
     - r-tibble >=2.0.0
     - r-tidyselect
+    - r-vctrs
     - r-withr
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-rcpp >=0.12.18.3
     - r-bit64
+    - r-cpp11 >=0.2.0
     - r-crayon
     - r-glue
     - r-hms
@@ -56,6 +57,7 @@ requirements:
     - r-rlang >=0.4.2
     - r-tibble >=2.0.0
     - r-tidyselect
+    - r-vctrs
     - r-withr
 
 test:
@@ -65,7 +67,7 @@ test:
 
 about:
   home: https://github.com/r-lib/vroom
-  license: GPL-3
+  license: GPL-3.0-only
   summary: The goal of 'vroom' is to read and write data (like 'csv', 'tsv' and 'fwf') quickly. When reading it uses a quick initial indexing step, then reads the values lazily , so only the data you actually use needs to be read.  The writer formats the data in parallel and writes to disk asynchronously from formatting.
   license_family: GPL3
   license_file:
