@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vroom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vroom/vroom_{{ version }}.tar.gz
-  sha256: c7d9de224951c99876fd5fc0c7fc7ef190f6bc386633fd5d5a4e7d017a313111
+  sha256: c4fa03b13d8cd9034cbaa75dba623f53a53e55bceb85de6c4cff7cf757ae72b2
 
 build:
   merge_build_host: true  # [win]
