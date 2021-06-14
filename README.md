@@ -3,7 +3,7 @@ About r-vroom
 
 Home: https://github.com/r-lib/vroom
 
-Package license: GPL-3.0-only
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vroom-feedstock/blob/master/LICENSE.txt)
 
