@@ -1,11 +1,22 @@
+About r-vroom-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vroom-feedstock/blob/main/LICENSE.txt)
+
 About r-vroom
-=============
+-------------
 
 Home: https://github.com/r-lib/vroom
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vroom-feedstock/blob/main/LICENSE.txt)
+Summary: The goal of 'vroom' is to read and write data (like 'csv', 'tsv' and 'fwf') quickly. When reading it uses a quick initial indexing step, then reads the values lazily , so only the data you actually use needs to be read.  The writer formats the data in parallel and writes to disk asynchronously from formatting.
+About r-vroom
+-------------
+
+Home: https://github.com/r-lib/vroom
+
+Package license: MIT
 
 Summary: The goal of 'vroom' is to read and write data (like 'csv', 'tsv' and 'fwf') quickly. When reading it uses a quick initial indexing step, then reads the values lazily , so only the data you actually use needs to be read.  The writer formats the data in parallel and writes to disk asynchronously from formatting.
 
