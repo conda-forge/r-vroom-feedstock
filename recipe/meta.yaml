@@ -1,6 +1,5 @@
 {% set version = "1.6.5" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-vroom
@@ -13,8 +12,7 @@ source:
   sha256: 7bdca21e58c9c5049d7445d182f59fd399193cb2f4318d083de0a559ec9b5761
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +35,9 @@ requirements:
     - r-glue                     # [build_platform != target_platform]
     - r-withr                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -64,7 +64,6 @@ requirements:
     - r-withr
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-bit64
     - r-cli
     - r-cpp11 >=0.2.0
