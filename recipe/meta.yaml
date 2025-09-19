@@ -1,4 +1,4 @@
-{% set version = "1.6.5" %}
+{% set version = "1.6.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vroom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vroom/vroom_{{ version }}.tar.gz
-  sha256: 7bdca21e58c9c5049d7445d182f59fd399193cb2f4318d083de0a559ec9b5761
+  sha256: 855b7ef11ba8b41624064d7b0327b4bd6a02024fb9c4801a09d38224a10980de
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
